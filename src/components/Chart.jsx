@@ -19,14 +19,14 @@ const Chart = () => {
           <li>Twitter <small>1000000000</small></li>
           <li>Telegram <small>500000000</small></li>
         </ul>
-        <PieChart className="pieChart" width={400} height={400}>
+        <PieChart className="pieChart" width={360} height={360}>
           <Pie
               dataKey="value"
               isAnimationActive={false}
               data={data}
               cx="50%"
               cy="50%"
-              outerRadius={80}
+              outerRadius={60}
               fill="#018888"
               label={data}
           />

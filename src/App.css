@@ -10,6 +10,14 @@ ul li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* #root {
+  background-color: rgb(235, 193, 193);
+} */
+
 
 .App {
   padding: 1em 0;
@@ -21,7 +29,8 @@ ul li {
   font-size: 1.25rem;
 }
 
-h1 {
+h1,
+h2 {
   margin-bottom: 4em;
   color: teal;
   text-align: center;
@@ -31,6 +40,96 @@ h3 {
   color: teal;
   text-align: center;
 }
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-shape {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(8, 82, 82);
+  border-radius: 100px;
+  margin-right: .2em;
+  position: relative;
+}
+
+.logo-shape::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+}
+
+.logo-shape::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(8, 82, 82);
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+}
+
+
+.logo p {
+  color: rgb(8, 82, 82);
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.8em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: rgb(8, 82, 82);
+  font-size: 1.2rem;
+  transition: all 0.7s;
+}
+
+.nav-link:hover {
+  display: block;
+  transform: scale(1.1);
+}
+
+
+
+.homePage {
+  padding: 2em 0;
+}
+
+.registerPage {
+  padding: 2em 0 4em 0;
+}
+
+
+.loginPage {
+  padding: 0 0 2em 0;
+}
+
+
+
 
 button {
   padding: .6em 1.5em;
@@ -55,6 +154,7 @@ button:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 .chart-legend {
@@ -78,4 +178,37 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5em;
+}
+
+.loginPage {
+  padding: 7em 0;
+}
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 700px) {
+  .App {
+    width: 90%;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .chart-legend li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .chart-container {
+    flex-wrap: wrap;
+  }
+
+  .chart-legend {
+    order: 3;
+  }
 }
