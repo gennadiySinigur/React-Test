@@ -14,7 +14,7 @@ ul li {
 .App {
   padding: 1em 0;
   width: 70%;
-  max-width: 400px;
+  max-width: 600px;
   height: 100vh;
   margin: 0 auto;
   font-family: sans-serif;
@@ -72,4 +72,10 @@ button:hover {
 
 .pieChart {
   margin-top: 0;
+}
+
+.animation-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
 }
