@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css'; 
 import FormInput from './components/FormInput';
+import HomePage from './components/HomePage';
 
 const App = () => {
   const [values, setValues] = useState({
@@ -75,8 +76,10 @@ const App = () => {
 
   return (
     <div className="App">
+      <HomePage/>
       <form onSubmit={handleSubmit}>
         <h1>Registration</h1>
+
         {inputs.map((input) => (
           <FormInput 
             key={input.id} 
@@ -85,16 +88,12 @@ const App = () => {
             onChange={onChange}
           />
         ))}
+
         <button>Submit</button>
       </form>
     </div>
-    );
-  }
+  );
+};
 
   
-  
-  
-  
-
-
 export default App;
