@@ -8,6 +8,7 @@ import {
   Route,
   Routes
 } from 'react-router-dom';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/signin' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 };  

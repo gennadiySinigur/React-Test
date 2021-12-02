@@ -184,6 +184,14 @@ button:hover {
   padding: 7em 0;
 }
 
+.footer {
+  text-align: center;
+  padding: 2em 0;
+  color: rgba(2, 80, 80, 0.801);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
 
 
 
@@ -210,5 +218,16 @@ button:hover {
 
   .chart-legend {
     order: 3;
+  }
+}
+
+@media(max-width: 390px) {
+  .logo {
+    transform: scale(.8) translateY(2px);
+    
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
   }
 }
